@@ -26,9 +26,9 @@ let SETTINGS = {
 	init({ clear });
 	input.includes(`help`) && cli.showHelp(0);
 
-	getConfig(input, flags);
+	await getConfig(input, flags, SETTINGS);
 
-	generateProject();
+	await generateProject(SETTINGS);
 
 	debug && log(flags);
 })();
