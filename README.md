@@ -18,6 +18,6 @@ Powered by [Vite](https://vitejs.dev).
 
 <div align="center">
 
-[Licence (MIT)](https://github.com/IogaMaster/create-svelte3-app/blob/main/LICENCE)
+[License (MIT)](https://github.com/IogaMaster/create-svelte3-app/blob/main/LICENSE)
 
 </div>
