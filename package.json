@@ -17,7 +17,8 @@
 	],
 	"files": [
 		"index.js",
-		"utils"
+		"utils",
+		"banner.png"
 	],
 	"scripts": {
 		"format": "prettier --write \"./**/*.{js,json}\""
