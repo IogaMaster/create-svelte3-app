@@ -1,5 +1,6 @@
 const meow = require('meow');
 const meowHelp = require('cli-meow-help');
+const chalk = require('chalk');
 
 const flags = {
 	clear: {
@@ -21,8 +22,33 @@ const flags = {
 	},
 	type: {
 		type: 'string',
+		desc: `What type of project you want.`,
+		default: 'rollup'
+	},
+	typescript: {
+		type: 'boolean',
 		alias: 't',
-		desc: `What type of project you want.`
+		desc: `Use ${chalk.blue('Typescript')} in this project`
+	},
+	eslint: {
+		type: 'boolean',
+		alias: 'e',
+		desc: `Use ${chalk.magenta('ESLint')} in this project`
+	},
+	prettier: {
+		type: 'boolean',
+		alias: 'p',
+		desc: `Use Prettier in this project`
+	},
+	jest: {
+		type: 'boolean',
+		alias: 'j',
+		desc: `Use ${chalk.red('Jest')} in this project`
+	},
+	husky: {
+		type: 'boolean',
+		alias: 'h',
+		desc: `Use ${chalk.grey('Husky')} in this project`
 	}
 };
 

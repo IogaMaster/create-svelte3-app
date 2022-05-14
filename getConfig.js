@@ -42,5 +42,33 @@ module.exports = async function getConfig(input, flags, SETTINGS) {
 		return projectType;
 	}
 
+	async function getSettings() {
+		let settings = [];
+		console.log(flags.typescript);
+		if (
+			flags.typescript ||
+			flags.eslint ||
+			flags.prettier ||
+			flags.jest ||
+			flags.husky
+		) {
+			settings = [
+				flags.typescript ? 'Typescript' : null,
+				flags.ESLint ? 'ESLint' : null,
+				flags.Prettier ? 'Prettier' : null,
+				flags.Jest ? 'Jest' : null,
+				flags.Husky ? 'Husky' : null
+			];
+		} else {
+			settings = await inquirer.prompt({
+				name: 'settings',
+				type: 'checkbox',
+				choices: ['Typescript', 'ESLint', 'Prettier', 'Jest', 'Husky']
+			});
+		}
+		return settings.settings;
+	}
+
+	await getSettings();
 	return;
 };
