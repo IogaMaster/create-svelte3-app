@@ -1,7 +1,7 @@
 {
 	"name": "create-svelte3-app",
 	"description": "Create a configured Svelte 3 app quickly.",
-	"version": "0.0.1",
+	"version": "1.0.3",
 	"license": "MIT",
 	"bin": {
 		"create-svelte3-app": "index.js"
