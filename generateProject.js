@@ -1,1 +1,1 @@
-module.exports = async function generateProject() {};
+module.exports = async function generateProject(SETTINGS) {};

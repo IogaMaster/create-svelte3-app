@@ -1,1 +1,1 @@
-module.exports = async function getConfig(flags) {};
+module.exports = async function getConfig(input, flags) {};

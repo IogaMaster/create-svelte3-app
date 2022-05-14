@@ -18,11 +18,15 @@ const input = cli.input;
 const flags = cli.flags;
 const { clear, debug } = flags;
 
+let SETTINGS = {
+	projectName: 'svelte3-app'
+};
+
 (async () => {
 	init({ clear });
 	input.includes(`help`) && cli.showHelp(0);
 
-	getConfig(flags);
+	getConfig(input, flags);
 
 	generateProject();
 
