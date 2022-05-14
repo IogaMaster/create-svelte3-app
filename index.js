@@ -19,7 +19,8 @@ const flags = cli.flags;
 const { clear, debug } = flags;
 
 let SETTINGS = {
-	projectName: 'svelte3-app'
+	projectName: 'svelte3-app',
+	projectType: 'svelte-rollup'
 };
 
 (async () => {

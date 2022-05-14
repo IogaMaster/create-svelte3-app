@@ -18,6 +18,11 @@ const flags = {
 		type: `boolean`,
 		alias: `v`,
 		desc: `Print CLI version`
+	},
+	type: {
+		type: 'string',
+		alias: 't',
+		desc: `What type of project you want.`
 	}
 };
 
