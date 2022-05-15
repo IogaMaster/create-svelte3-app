@@ -1,10 +1,14 @@
 {
 	"name": "create-svelte3-app",
 	"description": "Create a configured Svelte 3 app quickly.",
-	"version": "2.0.0",
+	"version": "2.0.1",
 	"license": "MIT",
 	"bin": {
 		"create-svelte3-app": "index.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/IogaMaster/create-svelte3-app"
 	},
 	"author": {
 		"name": "IogaMaster",
@@ -18,7 +22,7 @@
 	"files": [
 		"index.js",
 		"utils",
-		"banner.png"
+		"templates"
 	],
 	"scripts": {
 		"format": "prettier --write \"./**/*.{js,json}\""
