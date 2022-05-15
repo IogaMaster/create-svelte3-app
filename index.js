@@ -10,8 +10,8 @@
 const init = require('./utils/init');
 const cli = require('./utils/cli');
 const log = require('./utils/log');
-const getConfig = require('./getConfig');
-const generateProject = require('./generateProject');
+const getConfig = require('./utils/getConfig');
+const generateProject = require('./utils/generateProject');
 const chalk = require('chalk');
 
 const input = cli.input;
