@@ -28,6 +28,15 @@ let SETTINGS = {
 	useHusky: false
 };
 
+const import_meta_url =
+	typeof document === 'undefined'
+		? new (require('url'.replace('', '')).URL)('file:' + __filename).href
+		: (document.currentScript && document.currentScript.src) ||
+		  new URL('main.js', document.baseURI).href;
+
+const ___dirname = dirname(fileURLToPath(import_meta_url));
+const templateDir = resolve(`${___dirname}/templates/`);
+
 (async function () {
 	init({ clear });
 	input.includes(`help`) && cli.showHelp(0);
@@ -35,7 +44,7 @@ let SETTINGS = {
 
 	await getConfig(input, flags, SETTINGS);
 
-	await generateProject(SETTINGS);
+	await generateProject(SETTINGS, templateDir);
 
 	console.log(`
 We suggest you run:

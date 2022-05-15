@@ -3,20 +3,11 @@ const { dirname, resolve } = require('path');
 const fs = require('fs-extra');
 const { createSpinner } = require('nanospinner');
 
-const import_meta_url =
-	typeof document === 'undefined'
-		? new (require('url'.replace('', '')).URL)('file:' + __filename).href
-		: (document.currentScript && document.currentScript.src) ||
-		  new URL('main.js', document.baseURI).href;
-
-const ___dirname = dirname(fileURLToPath(import_meta_url));
-const templateDir = resolve(`${___dirname}/templates/`);
-
 const Util = require('util');
 const exec = require('child_process').exec;
 
 const asyncExec = Util.promisify(exec);
-module.exports = async function generateProject(SETTINGS) {
+module.exports = async function generateProject(SETTINGS, templateDir) {
 	console.log();
 	const spinner = createSpinner(`Generating ${SETTINGS.projectName}`).start();
 
