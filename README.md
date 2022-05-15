@@ -4,15 +4,22 @@
 
 # create-svelte3-app
 
-Quickly create Svelte 3 web apps configured with:
+Quickly create Svelte 3 web apps with:
+
+-   Rollup
+-   SvelteKit
+
+    or
+
+-   Vite
+
+Configured with:
 
 -   Typescript
 -   ESLint
 -   Prettier
 -   Jest
 -   Husky
-
-Powered by [Vite](https://vitejs.dev).
 
 ---
 
