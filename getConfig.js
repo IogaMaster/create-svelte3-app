@@ -7,7 +7,8 @@ module.exports = async function getConfig(input, flags, SETTINGS) {
 		questions.push({
 			name: 'projectName',
 			type: 'input',
-			message: 'What is the name of your app'
+			message: 'What is the name of your app',
+			initial: 'svelte3-app'
 		});
 	}
 
@@ -60,11 +61,11 @@ module.exports = async function getConfig(input, flags, SETTINGS) {
 	) {
 		let type = flags.type.toLowerCase();
 		if (flags.type.toLowerCase() == 'sveltekit') type = 'kit';
-		SETTINGS.projectType = type;
+		SETTINGS.projectType = 'svelte-' + type;
 	} else {
 		let type = config.projectType.toLowerCase();
 		if (config.projectType.toLowerCase() == 'sveltekit') type = 'kit';
-		SETTINGS.projectType = type;
+		SETTINGS.projectType = 'svelte-' + type;
 	}
 
 	if (

@@ -11,6 +11,7 @@ const init = require('./utils/init');
 const cli = require('./utils/cli');
 const log = require('./utils/log');
 const getConfig = require('./getConfig');
+const generateProject = require('./generateProject');
 
 const input = cli.input;
 const flags = cli.flags;
@@ -33,6 +34,5 @@ let SETTINGS = {
 
 	await getConfig(input, flags, SETTINGS);
 
-	console.log();
-	console.log(SETTINGS);
+	await generateProject(SETTINGS);
 })();
