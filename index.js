@@ -12,6 +12,7 @@ const cli = require('./utils/cli');
 const log = require('./utils/log');
 const getConfig = require('./getConfig');
 const generateProject = require('./generateProject');
+const chalk = require('chalk');
 
 const input = cli.input;
 const flags = cli.flags;
@@ -35,4 +36,9 @@ let SETTINGS = {
 	await getConfig(input, flags, SETTINGS);
 
 	await generateProject(SETTINGS);
+
+	console.log(`
+We suggest you run:
+
+$ ${chalk.green('npm')} install`);
 })();
