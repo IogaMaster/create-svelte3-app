@@ -10,8 +10,6 @@
 const init = require('./utils/init');
 const cli = require('./utils/cli');
 const log = require('./utils/log');
-
-const generateProject = require('./generateProject');
 const getConfig = require('./getConfig');
 
 const input = cli.input;
@@ -21,16 +19,20 @@ const { clear, debug } = flags;
 let SETTINGS = {
 	projectName: 'svelte3-app',
 	projectType: 'svelte-rollup',
-	config: []
+	useTypescript: false,
+	useESLint: false,
+	usePrettier: false,
+	useJest: false,
+	useHusky: false
 };
 
-(async () => {
+(async function () {
 	init({ clear });
 	input.includes(`help`) && cli.showHelp(0);
+	debug && log(flags);
 
 	await getConfig(input, flags, SETTINGS);
 
-	await generateProject(SETTINGS);
-
-	debug && log(flags);
+	console.log();
+	console.log(SETTINGS);
 })();

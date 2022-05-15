@@ -22,8 +22,7 @@ const flags = {
 	},
 	type: {
 		type: 'string',
-		desc: `What type of project you want.`,
-		default: 'rollup'
+		desc: `What type of project you want.`
 	},
 	typescript: {
 		type: 'boolean',
