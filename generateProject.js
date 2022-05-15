@@ -18,7 +18,7 @@ const exec = require('child_process').exec;
 const asyncExec = Util.promisify(exec);
 module.exports = async function generateProject(SETTINGS) {
 	console.log();
-	const spinner = createSpinner(`Generate ${SETTINGS.projectName}`).start();
+	const spinner = createSpinner(`Generating ${SETTINGS.projectName}`).start();
 
 	try {
 		const projectDir = `${process.cwd()}/${SETTINGS.projectName}`;
