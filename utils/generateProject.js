@@ -1,5 +1,3 @@
-const { fileURLToPath } = require('url');
-const { dirname, resolve } = require('path');
 const fs = require('fs-extra');
 const { createSpinner } = require('nanospinner');
 

@@ -13,6 +13,8 @@ const log = require('./utils/log');
 const getConfig = require('./utils/getConfig');
 const generateProject = require('./utils/generateProject');
 const chalk = require('chalk');
+const { fileURLToPath } = require('url');
+const { dirname, resolve } = require('path');
 
 const input = cli.input;
 const flags = cli.flags;
